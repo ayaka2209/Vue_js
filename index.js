@@ -11,13 +11,14 @@ new Vue({
       { id: 1, name: '野呂浩良', course: '機械学習コース', acceptancePeriod: '2019年01月期' },
       { id: 2, name: '富永修司', course: 'Webエンジニアコース', acceptancePeriod: '2017年11月期' },
       { id: 3, name: '斉藤一起', course: 'Webエンジニアコース', acceptancePeriod: '2017年11月期' }
-    ]
+    ],
+    nextStudentID: 4
   },
   // methodsに、Vue.jsのインスタンスに使用させたいメソッドを記載する
   methods: {
     addStudent: function () {
       // this.defaultLastId = this.defaultLastId + 1
-      this.students.push({ id: this.defaultLastId + 1, name: this.name, course: this.course, acceptancePeriod: this.acceptancePeriod })
+      this.students.push({ id: this.nextStudentID++, name: this.name, course: this.course, acceptancePeriod: this.acceptancePeriod })
       // this.students.push({ name: this.name, course: this.course, acceptancePeriod: this.acceptancePeriod });
       // this.students.push({ name: this.name});
       // this.students.push({ course: this.course});
